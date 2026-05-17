@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://crsy16jsw0nym"]
+
+[ext_resource type="Script" uid="uid://bg4bq65n0myte" path="res://Scripts/Nodes/platformer.gd" id="1_41awe"]
+
+[node name="Platformer" type="Control" unique_id=661332894]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_41awe")

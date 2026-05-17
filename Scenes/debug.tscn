@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://ba5slbce1ifr7"]
+
+[ext_resource type="Script" uid="uid://c4oukwwfd0xg8" path="res://Scripts/Nodes/Worlds/world_data.gd" id="1_axs6p"]
+[ext_resource type="PackedScene" uid="uid://duuhiylxlquxx" path="res://Scenes/Worlds/spawnpoint.tscn" id="1_raf04"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_wvwly"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_raf04"]
+size = Vector2(96, 20)
+
+[node name="Node2D" type="Node2D" unique_id=900649309]
+script = ExtResource("1_axs6p")
+world_name = "debug0"
+camera_limited = true
+camera_limit_left = 0
+camera_limit_top = 0
+camera_limit_right = 1152
+camera_limit_bottom = 648
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1255024614]
+position = Vector2(588, 460)
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=2025804863]
+shape = SubResource("WorldBoundaryShape2D_wvwly")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=1072253244]
+position = Vector2(731, 390)
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=1598149891]
+position = Vector2(-38, 0)
+shape = SubResource("RectangleShape2D_raf04")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="." unique_id=1499300119]
+position = Vector2(517, 319)
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3" unique_id=2113479332]
+position = Vector2(-38, 0)
+shape = SubResource("RectangleShape2D_raf04")
+
+[node name="SpawnPoint" parent="." unique_id=1497942262 instance=ExtResource("1_raf04")]
+position = Vector2(457, 47)

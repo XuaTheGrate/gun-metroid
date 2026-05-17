@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="WeaponResource" format=3 uid="uid://drxebuwva4iug"]
+
+[ext_resource type="Script" uid="uid://dphfa5sc7s4dn" path="res://Scripts/Resources/weapon_resource.gd" id="1_ns3ag"]
+
+[resource]
+script = ExtResource("1_ns3ag")
+name = "Handgun"
+projectile = "uid://bna5qovmf1gg1"
+magazine_size = 12
+bullet_speed = 1500.0
+reload_time = 3.0
+fire_rate = 0.25
+metadata/_custom_type_script = "uid://dphfa5sc7s4dn"

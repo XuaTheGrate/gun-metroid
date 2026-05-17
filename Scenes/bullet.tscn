@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://bna5qovmf1gg1"]
+
+[ext_resource type="Script" uid="uid://d0n8wyan05a7i" path="res://Scripts/bullet.gd" id="1_xjght"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4mw4s"]
+radius = 2.0
+
+[node name="Bullet" type="CharacterBody2D" unique_id=1594112416]
+collision_layer = 0
+motion_mode = 1
+script = ExtResource("1_xjght")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1375714195]
+shape = SubResource("CircleShape2D_4mw4s")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=144045860]
+rect = Rect2(-2, -2, 4, 4)
+
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_screen_exited"]

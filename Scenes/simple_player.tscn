@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://dy3co1ql27p68"]
+
+[ext_resource type="Script" uid="uid://co8xaeje1ge8w" path="res://Scripts/simple_player.gd" id="1_wy12b"]
+[ext_resource type="Script" uid="uid://ctq8lh1mxw17v" path="res://Scripts/weapon_controller.gd" id="2_j0y0t"]
+[ext_resource type="PackedScene" uid="uid://mmf5hum8eoxf" path="res://Scenes/Weapons/handgun.tscn" id="3_or8h0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j0y0t"]
+size = Vector2(20, 28)
+
+[node name="PlayerController" type="CharacterBody2D" unique_id=1896339098 node_paths=PackedStringArray("camera") groups=["PlayerController"]]
+collision_layer = 2
+script = ExtResource("1_wy12b")
+camera = NodePath("Camera2D")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=662656005]
+shape = SubResource("RectangleShape2D_j0y0t")
+
+[node name="WeaponController" type="Node2D" parent="." unique_id=796887980 node_paths=PackedStringArray("player")]
+unique_name_in_owner = true
+script = ExtResource("2_j0y0t")
+player = NodePath("..")
+
+[node name="Handgun" parent="WeaponController" unique_id=356561769 instance=ExtResource("3_or8h0")]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=878938822]
+limit_enabled = false
+limit_left = 0
+limit_top = 0
+limit_right = 1152
+limit_bottom = 648

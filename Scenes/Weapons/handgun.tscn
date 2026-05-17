@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://mmf5hum8eoxf"]
+
+[ext_resource type="Script" uid="uid://ychdvgt4achm" path="res://Scripts/Nodes/Weapons/handgun.gd" id="1_w1cfm"]
+
+[node name="Handgun" type="Node2D" unique_id=356561769]
+script = ExtResource("1_w1cfm")
+weapon_name = "Handgun"
+fire_rate = 0.33
+magazine_size = 12
+reload_speed = 1.0
+
+[node name="RayCast2D" type="RayCast2D" parent="." unique_id=1624757862]

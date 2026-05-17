@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://djxvyxwnxjff6"]
+
+[ext_resource type="Script" uid="uid://c6agxrd40lcb4" path="res://Scripts/game.gd" id="1_qxrlw"]
+[ext_resource type="Script" uid="uid://cy70msqfvlira" path="res://Scripts/Containers/scene_container.gd" id="2_wrm1d"]
+[ext_resource type="Script" uid="uid://cs7r4ayg1mf63" path="res://Scripts/Managers/transition_manager.gd" id="3_wrm1d"]
+
+[node name="Game" type="Control" unique_id=499815256 node_paths=PackedStringArray("root_container")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qxrlw")
+root_container = NodePath("RootContainer")
+
+[node name="RootContainer" type="Control" parent="." unique_id=2086759355]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_wrm1d")
+
+[node name="TransitionManager" type="ColorRect" parent="." unique_id=555188647]
+unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+script = ExtResource("3_wrm1d")
